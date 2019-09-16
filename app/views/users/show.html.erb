@@ -10,12 +10,16 @@
   <%= @user.email %>
 </p>
 
-<% if @micropost %>
-  <p>
-    <strong>Content:</strong>
-    <%= @micropost.content %>
-  </p>
-  <%else%>
+<% if @microposts.present? %>
+  <% @microposts.each do |micropost| %>
+    <p>
+      <strong>Content:</strong>
+      <%= micropost.content %>
+    </p>
+      <%= micropost.user_id %>
+      <%= micropost.created_at %>
+  <% end %>
+<% else %>
   <p><strong>This user has no posts yet</strong></p>
 <% end %>
 
