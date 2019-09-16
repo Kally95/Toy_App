@@ -16,8 +16,14 @@
       <strong>Content:</strong>
       <%= micropost.content %>
     </p>
+    <p>
+      <strong>User ID:</strong>
       <%= micropost.user_id %>
+    </p>
+    <p>
+      <strong>Created:</strong>
       <%= micropost.created_at %>
+    </p>
   <% end %>
 <% else %>
   <p><strong>This user has no posts yet</strong></p>

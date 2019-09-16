@@ -25,6 +25,7 @@ class MicropostsController < ApplicationController
   # POST /microposts.json
   def create
     @micropost = Micropost.new(micropost_params)
+    # byebug
 
     respond_to do |format|
       if @micropost.save
